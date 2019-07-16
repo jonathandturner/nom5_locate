@@ -9,7 +9,7 @@ license = "MIT"
 name = "nom5_locate"
 readme = "README.md"
 repository = "https://github.com/jonathandturner/nom_locate"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2018"
 
 [features]

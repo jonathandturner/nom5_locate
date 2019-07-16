@@ -321,7 +321,7 @@ where
         };
 
         match &result {
-            Ok(v) => {}
+            Ok(_) => {}
             Err(Err::Incomplete(_)) => println!("incomplete"),
             Err(Err::Error(_)) => println!("error"),
             Err(Err::Failure(_)) => println!("failure"),
@@ -354,7 +354,6 @@ where
             Some(0) => Err(Err::Error(E::from_error_kind(self.clone(), e))),
             Some(n) => Ok(self.take_split(n)),
             None => {
-                println!("{:?}", self);
                 if self.fragment.input_len() == 0 {
                     Err(Err::Error(E::from_error_kind(self.clone(), e)))
                 } else {
